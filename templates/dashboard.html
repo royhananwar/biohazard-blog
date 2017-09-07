@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Welcome, <small>{{ session['username'] }}</small></h1>
+{% endblock %}
+{#you can use session.username or session['username']#}
+{#remember you save data dictionary#}

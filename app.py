@@ -65,7 +65,56 @@ def register():
     return render_template('register.html', form=form)
 
 
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        # get data from /login if 'POST'
+        username = request.form['username']
+        password_request = request.form['password']
+        # Create cursor db
+        cur = mysql.connection.cursor()
+        result = cur.execute('SELECT * FROM users WHERE username=%s', (username,))
 
+        if result > 0:
+            # Get data from DB
+            data = cur.fetchone()
+            password = data['password']
+
+            # Check password_request == password from database
+            if sha256_crypt.verify(password_request, password):
+                # Passed
+                session['logged_in'] = True
+                session['username'] = username
+
+                flash("You are now Logged in!", category="success")
+
+                # close connection
+                cur.close()
+
+                return redirect(url_for('dashboard'))
+
+            else:
+                # password not same
+                error = 'PASSWORD DOES NOT MATCH'
+                return render_template('login.html', error=error)
+
+        else:
+            error = 'USERNAME NOT FOUND'
+            return render_template('login.html', error=error)
+
+    return render_template('login.html')
+
+
+@app.route('/logout')
+def logout():
+    session.clear()
+    flash("You are now logged out", category="success")
+    return redirect(url_for('login'))
+
+
+@app.route('/dashboard')
+def dashboard():
+    return render_template('dashboard.html')
 
 
 if __name__ == '__main__':
