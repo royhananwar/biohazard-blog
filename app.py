@@ -20,7 +20,7 @@ mysql = MySQL(app)
 
 # Home Page
 @app.route('/')
-def hello_world():
+def home():
     return render_template('base.html')
 
 
@@ -58,9 +58,16 @@ def register():
         # Close Connection
         cur.close()
 
-        return render_template('register.html', form=form)
+        flash('You are now registered and can login', category='success')
+
+        return redirect(url_for('login'))
 
     return render_template('register.html', form=form)
 
+
+
+
+
 if __name__ == '__main__':
+    app.secret_key = '35000$j7SjhWMbv5PF9NaC$7/M069jMb1IGRbVKb3kZ7jCoPGpZpPbnQmhIFhbBn3B'
     app.run(debug=True)
