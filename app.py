@@ -1,7 +1,9 @@
 from flask import Flask, render_template, flash, redirect, url_for, session, logging, request
 from flask_mysqldb import MySQL
 from wtforms import Form, StringField, TextAreaField, PasswordField, validators
+
 from passlib.hash import sha256_crypt
+from functools import wraps
 
 from setup import *
 
@@ -71,6 +73,7 @@ def login():
         # get data from /login if 'POST'
         username = request.form['username']
         password_request = request.form['password']
+
         # Create cursor db
         cur = mysql.connection.cursor()
         result = cur.execute('SELECT * FROM users WHERE username=%s', (username,))
@@ -105,7 +108,20 @@ def login():
     return render_template('login.html')
 
 
+# Check if user is login
+def login_required(f):
+    @wraps(f)
+    def wrap(*args, **kwargs):
+        if 'logged_in' in session:
+            return f(*args, **kwargs)
+        else:
+            flash("Please, Login first!", category="danger")
+            return redirect(url_for('login'))
+    return wrap
+
+
 @app.route('/logout')
+@login_required
 def logout():
     session.clear()
     flash("You are now logged out", category="success")
@@ -113,6 +129,7 @@ def logout():
 
 
 @app.route('/dashboard')
+@login_required
 def dashboard():
     return render_template('dashboard.html')
 
