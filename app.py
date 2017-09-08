@@ -14,7 +14,7 @@ app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = user
 app.config['MYSQL_PASSWORD'] = password
 app.config['MYSQL_DB'] = 'biohazard'
-app.config['MYSQL_CURSORCLASS'] = 'DictCursor' #return data become dictionary
+app.config['MYSQL_CURSORCLASS'] = 'DictCursor'  # return data become dictionary
 
 # init MySQL
 mysql = MySQL(app)
@@ -117,6 +117,7 @@ def login_required(f):
         else:
             flash("Please, Login first!", category="danger")
             return redirect(url_for('login'))
+
     return wrap
 
 
@@ -132,6 +133,49 @@ def logout():
 @login_required
 def dashboard():
     return render_template('dashboard.html')
+
+
+@app.route('/category')
+def category_index():
+    # Create cursor
+    cur = mysql.connection.cursor()
+
+    # Get data from db
+    # Check how many data do you have, and return it become integer
+    result = cur.execute("SELECT * FROM category")
+
+    # Make result become tuple/dict
+    categories = cur.fetchall()
+    cur.close()
+    if result > 0:
+        return render_template('category.html', categories=categories)
+    else:
+        msg = "No Category Found"
+        return render_template('category.html', msg=msg)
+
+
+@app.route('/add_category', methods=['GET', 'POST'])
+@login_required
+def add_category():
+    if request.method == 'POST':
+        # Get value from add_category.html
+        category_name = request.form['category_name']
+
+        # Create cursor
+        cur = mysql.connection.cursor()
+
+        # Insert to DB
+        cur.execute('INSERT INTO category(name) VALUES(%s)', (category_name, ))
+
+        # Save to DB
+        mysql.connection.commit()
+
+        # Close connection
+        cur.close()
+
+        return redirect(url_for('category'))
+
+    return render_template('add_category.html')
 
 
 if __name__ == '__main__':

@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% for category in categories %}
+        <p>{{ category.category_id }}</p>
+        <p>{{ category.name }}</p>
+    {% endfor %}
+    
+{% endblock %}
