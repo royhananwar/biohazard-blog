@@ -1,6 +1,6 @@
-from flask import Flask, render_template, flash, redirect, url_for, session, logging, request
+from flask import Flask, render_template, flash, redirect, url_for, session, request
 from flask_mysqldb import MySQL
-from wtforms import Form, StringField, TextAreaField, PasswordField, validators
+from wtforms import Form, StringField, TextAreaField, PasswordField, validators, SelectField
 
 from passlib.hash import sha256_crypt
 from functools import wraps
@@ -148,10 +148,10 @@ def category_index():
     categories = cur.fetchall()
     cur.close()
     if result > 0:
-        return render_template('category.html', categories=categories)
+        return render_template('categories.html', categories=categories)
     else:
         msg = "No Category Found"
-        return render_template('category.html', msg=msg)
+        return render_template('categories.html', msg=msg)
 
 
 @app.route('/add_category', methods=['GET', 'POST'])
@@ -176,6 +176,63 @@ def add_category():
         return redirect(url_for('category'))
 
     return render_template('add_category.html')
+
+
+@app.route('/articles')
+def articles_index():
+
+    cur = mysql.connection.cursor()
+    result = cur.execute("SELECT * FROM view_articles")
+    articles = cur.fetchall()
+
+    if result > 0:
+        return render_template('articles.html', articles=articles)
+    else:
+        msg = "No articles found"
+        return render_template('articles.html', msg=msg)
+
+
+@app.route('/article/<int:article_id>')
+def article(article_id):
+    cur = mysql.connection.cursor()
+    result = cur.execute("SELECT * FROM view_articles WHERE article_id=%s", (article_id, ))
+    article = cur.fetchone()
+
+    if result > 0:
+        cur.close()
+        return render_template('article.html', article=article)
+    else:
+        cur.close()
+        msg = "Error 404!"
+        return render_template('article.html', msg=msg)
+
+# class ArticleForm(Form):
+#     title = StringField('Title', [validators.Length(min=1, max=50)])
+#     body = TextAreaField('Content', [validators.Length(min=20)])
+#     category = SelectField('Category', choices=[])
+
+
+@app.route('/add_article', methods=['GET', 'POST'])
+@login_required
+def add_article():
+    cur = mysql.connection.cursor()
+    if request.method == "POST":
+        title = request.form['title']
+        body = request.form['body']
+        category_id = request.form['category_id']
+
+        cur.execute("INSERT INTO articles(title, body, category_id, author) VALUES(%s, %s, %s, %s)",
+                    (title, body, category_id, session['username']))
+
+        mysql.connection.commit()
+        cur.close()
+        return redirect(url_for('articles_index'))
+    else:
+        cur.execute("SELECT * FROM category")
+        categories = cur.fetchall()
+        cur.close()
+
+        return render_template('add_article.html', categories=categories)
 
 
 if __name__ == '__main__':

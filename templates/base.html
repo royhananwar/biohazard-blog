@@ -20,12 +20,15 @@
 
     <!-- Custom styles for this template -->
     <link href="../static/blog/css/clean-blog.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/biohazard.css">
 
 </head>
 <body>
-    {% include 'includes/_navigation.html' %}
+    {% if request.url_rule.rule == '/' %}
+        {% include 'includes/_header.html' %}
+    {% endif %}
 
-    {% include 'includes/_header.html' %}
+    {% include 'includes/_navigation.html' %}
 
     <div class="container">
         <div class="row">

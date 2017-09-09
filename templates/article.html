@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+        {% if article %}
+            <center><h3>{{ article.title }}</h3><br></center>
+            <p>{{ article.body }}</p><br>
+            <p>{{ article.category_name }}</p>
+            <p class="post-meta">Posted by
+                <a href="/user/#">{{ article.author }}</a>
+                {{ article.create_date.strftime("%a, %m %d %y at %I:%M %p") }}</p>
+        {% endif %}
+{% endblock %}
