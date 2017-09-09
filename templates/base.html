@@ -24,33 +24,36 @@
 
 </head>
 <body>
-    {% if request.url_rule.rule == '/' %}
-        {% include 'includes/_header.html' %}
-    {% endif %}
+{% if request.url_rule.rule == '/' %}
+    {% include 'includes/_header.html' %}
+{% endif %}
 
-    {% include 'includes/_navigation.html' %}
+{% include 'includes/_navigation.html' %}
 
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-md-10 mx-auto">
-                <center>{% include 'includes/_messages.html' %}</center>
-                {% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+            <center>{% include 'includes/_messages.html' %}</center>
+            {% block content %}
 
-                {% endblock %}
+            {% endblock %}
 
-                <hr>
-            </div>
+            <hr>
         </div>
     </div>
+</div>
 
-    <hr>
+<hr>
 
-    {% include 'includes/_footer.html' %}
+{% include 'includes/_footer.html' %}
 
 <!-- Bootstrap core JavaScript -->
 <script src="../static/blog/vendor/jquery/jquery.min.js"></script>
 <script src="../static/blog/vendor/popper/popper.min.js"></script>
 <script src="../static/blog/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+<script src="../static/ckeditor/ckeditor.js"></script>
+<script src="../static/js/biohazard.js"></script>
 
 <!-- Custom scripts for this template -->
 <script src="../static/blog/js/clean-blog.min.js"></script>

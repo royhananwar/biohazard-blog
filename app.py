@@ -132,7 +132,16 @@ def logout():
 @app.route('/dashboard')
 @login_required
 def dashboard():
-    return render_template('dashboard.html')
+    cur = mysql.connection.cursor()
+    result = cur.execute("SELECT * FROM view_articles")
+    articles = cur.fetchall()
+    cur.close()
+
+    if result > 0:
+        return render_template('dashboard.html', articles=articles)
+    else:
+        msg = "No articles found"
+        return render_template('dashboard.html', msg=msg)
 
 
 @app.route('/category')
@@ -184,6 +193,7 @@ def articles_index():
     cur = mysql.connection.cursor()
     result = cur.execute("SELECT * FROM view_articles")
     articles = cur.fetchall()
+    cur.close()
 
     if result > 0:
         return render_template('articles.html', articles=articles)

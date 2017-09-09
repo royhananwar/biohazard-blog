@@ -2,7 +2,7 @@
 {% block content %}
     {% for article in articles %}
         <div class="post-preview">
-            <a href='article/#'>
+            <a href='article/{{ article.article_id }}'>
                 <h2 class="post-title">
                     {{ article.title }}
                 </h2>
