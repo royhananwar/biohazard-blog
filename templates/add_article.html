@@ -1,19 +1,19 @@
 {% extends 'base.html' %}
 {% block content %}
-    <form action="" method="post">
+    <form action="" method="post" onsubmit="preventDefault()">
         <div class="form-group">
             <label">Title</label><br>
             <input class="form-control" type="text" name="title"><br>
         </div>
         <div class="form-group">
             <label>Content</label><br>
-            <input class="form-control" type="text" name="body" id="content_editor"><br>
+            <textarea name="body" id="content_editor" class="form-control"></textarea>
         </div>
         <div class="form-group">
             <label>Category</label><br>
             <select name="category_id" class="form-control"><br>
                 {% for category in categories %}
-                    <option value="{{ category.category_id }}">{{ category.name }}</option>
+                    <option value="{{ category.category_id }}">{{ category.category_name }}</option>
                 {% endfor %}
             </select>
         </div>

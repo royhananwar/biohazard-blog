@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ccd0da18-f504-4304-968d-0274c809b050" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/biohazard.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.py" afterPath="$PROJECT_DIR$/app.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/add_article.html" afterPath="$PROJECT_DIR$/templates/add_article.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/article.html" afterPath="$PROJECT_DIR$/templates/article.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/articles.html" afterPath="$PROJECT_DIR$/templates/articles.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base.html" afterPath="$PROJECT_DIR$/templates/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/dashboard.html" afterPath="$PROJECT_DIR$/templates/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/categories.html" afterPath="$PROJECT_DIR$/templates/categories.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,23 +21,53 @@
       <file leaf-file-name="app.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="212" column="34" lean-forward="true" selection-start-line="212" selection-start-column="34" selection-end-line="212" selection-end-column="34" />
+            <state relative-caret-position="-253">
+              <caret line="223" column="0" lean-forward="true" selection-start-line="223" selection-start-column="0" selection-end-line="223" selection-end-column="0" />
               <folding>
                 <element signature="e#0#84#0" expanded="true" />
-                <marker date="1504925722669" expanded="true" signature="1620:1701" ph="INSERT INTO users... " />
-                <marker date="1504925722669" expanded="true" signature="1620:1716" ph="INSERT INTO users... " />
-                <marker date="1504925722669" expanded="true" signature="2363:2400" ph="SELECT * FRO... users" />
-                <marker date="1504925722669" expanded="true" signature="3904:3931" ph="SELECT * FRO... view_articles" />
-                <marker date="1504925722669" expanded="true" signature="4392:4414" ph="SELECT * FRO... category" />
-                <marker date="1504925722669" expanded="true" signature="5028:5065" ph="INSERT INTO category... " />
-                <marker date="1504925722669" expanded="true" signature="5397:5424" ph="SELECT * FRO... articles" />
-                <marker date="1504925722669" expanded="true" signature="5790:5811" ph="SELECT * FRO... view_ar" />
-                <marker date="1504925722669" expanded="true" signature="5790:5831" ph="SELECT * FRO... view_articles" />
-                <marker date="1504925722669" expanded="true" signature="5790:5837" ph="SELECT * FRO... view_articles" />
-                <marker date="1504925722669" expanded="true" signature="6625:6702" ph="INSERT INTO articles... " />
-                <marker date="1504925722669" expanded="true" signature="6911:6933" ph="SELECT * FRO... category" />
+                <marker date="1505486775266" expanded="true" signature="1620:1701" ph="INSERT INTO users... " />
+                <marker date="1505486775266" expanded="true" signature="1620:1716" ph="INSERT INTO users... " />
+                <marker date="1505486775266" expanded="true" signature="2363:2400" ph="SELECT * FRO... users" />
+                <marker date="1505486775266" expanded="true" signature="3904:3931" ph="SELECT * FRO... view_articles" />
+                <marker date="1505486775266" expanded="true" signature="4392:4414" ph="SELECT * FRO... category" />
+                <marker date="1505486775266" expanded="true" signature="5028:5074" ph="INSERT INTO category... " />
+                <marker date="1505486775266" expanded="true" signature="5412:5439" ph="SELECT * FRO... articles" />
+                <marker date="1505486775266" expanded="true" signature="5805:5826" ph="SELECT * FRO... view_ar" />
+                <marker date="1505486775266" expanded="true" signature="5805:5846" ph="SELECT * FRO... view_articles" />
+                <marker date="1505486775266" expanded="true" signature="5805:5852" ph="SELECT * FRO... view_articles" />
+                <marker date="1505486775266" expanded="true" signature="6670:6747" ph="INSERT INTO articles... " />
+                <marker date="1505486775266" expanded="true" signature="6956:6978" ph="SELECT * FRO... category" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add_category.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/add_category.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="5" column="46" lean-forward="false" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="articles.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/articles.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="18">
+              <caret line="9" column="40" lean-forward="false" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="article.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/article.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="5" column="46" lean-forward="true" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -46,8 +75,18 @@
       <file leaf-file-name="add_article.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/add_article.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="35">
-              <caret line="9" column="82" lean-forward="false" selection-start-line="9" selection-start-column="82" selection-end-line="9" selection-end-column="82" />
+            <state relative-caret-position="144">
+              <caret line="9" column="73" lean-forward="false" selection-start-line="9" selection-start-column="73" selection-end-line="9" selection-end-column="73" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="biohazard.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/js/biohazard.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="35" lean-forward="true" selection-start-line="0" selection-start-column="35" selection-end-line="0" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -95,14 +134,15 @@
         <option value="$PROJECT_DIR$/static/css/biohazard.css" />
         <option value="$PROJECT_DIR$/templates/login.html" />
         <option value="$PROJECT_DIR$/article.html" />
-        <option value="$PROJECT_DIR$/templates/article.html" />
         <option value="$PROJECT_DIR$/templates/includes/_navigation.html" />
-        <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/templates/dashboard.html" />
-        <option value="$PROJECT_DIR$/templates/articles.html" />
-        <option value="$PROJECT_DIR$/templates/add_article.html" />
         <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/static/js/biohazard.js" />
+        <option value="$PROJECT_DIR$/templates/categories.html" />
+        <option value="$PROJECT_DIR$/templates/article.html" />
+        <option value="$PROJECT_DIR$/app.py" />
+        <option value="$PROJECT_DIR$/templates/add_article.html" />
+        <option value="$PROJECT_DIR$/templates/articles.html" />
       </list>
     </option>
   </component>
@@ -169,8 +209,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -298,18 +338,18 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#84#0" expanded="true" />
-            <marker date="1504925722669" expanded="true" signature="1620:1701" ph="INSERT INTO users... " />
-            <marker date="1504925722669" expanded="true" signature="1620:1716" ph="INSERT INTO users... " />
-            <marker date="1504925722669" expanded="true" signature="2363:2400" ph="SELECT * FRO... users" />
-            <marker date="1504925722669" expanded="true" signature="3904:3931" ph="SELECT * FRO... view_articles" />
-            <marker date="1504925722669" expanded="true" signature="4392:4414" ph="SELECT * FRO... category" />
-            <marker date="1504925722669" expanded="true" signature="5028:5065" ph="INSERT INTO category... " />
-            <marker date="1504925722669" expanded="true" signature="5397:5424" ph="SELECT * FRO... articles" />
-            <marker date="1504925722669" expanded="true" signature="5790:5811" ph="SELECT * FRO... view_ar" />
-            <marker date="1504925722669" expanded="true" signature="5790:5831" ph="SELECT * FRO... view_articles" />
-            <marker date="1504925722669" expanded="true" signature="5790:5837" ph="SELECT * FRO... view_articles" />
-            <marker date="1504925722669" expanded="true" signature="6625:6702" ph="INSERT INTO articles... " />
-            <marker date="1504925722669" expanded="true" signature="6911:6933" ph="SELECT * FRO... category" />
+            <marker date="1505486775266" expanded="true" signature="1620:1701" ph="INSERT INTO users... " />
+            <marker date="1505486775266" expanded="true" signature="1620:1716" ph="INSERT INTO users... " />
+            <marker date="1505486775266" expanded="true" signature="2363:2400" ph="SELECT * FRO... users" />
+            <marker date="1505486775266" expanded="true" signature="3904:3931" ph="SELECT * FRO... view_articles" />
+            <marker date="1505486775266" expanded="true" signature="4392:4414" ph="SELECT * FRO... category" />
+            <marker date="1505486775266" expanded="true" signature="5028:5074" ph="INSERT INTO category... " />
+            <marker date="1505486775266" expanded="true" signature="5412:5439" ph="SELECT * FRO... articles" />
+            <marker date="1505486775266" expanded="true" signature="5805:5826" ph="SELECT * FRO... view_ar" />
+            <marker date="1505486775266" expanded="true" signature="5805:5846" ph="SELECT * FRO... view_articles" />
+            <marker date="1505486775266" expanded="true" signature="5805:5852" ph="SELECT * FRO... view_articles" />
+            <marker date="1505486775266" expanded="true" signature="6670:6747" ph="INSERT INTO articles... " />
+            <marker date="1505486775266" expanded="true" signature="6956:6978" ph="SELECT * FRO... category" />
           </folding>
         </state>
       </provider>
@@ -343,18 +383,18 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#84#0" expanded="true" />
-            <marker date="1504925722669" expanded="true" signature="1620:1701" ph="INSERT INTO users... " />
-            <marker date="1504925722669" expanded="true" signature="1620:1716" ph="INSERT INTO users... " />
-            <marker date="1504925722669" expanded="true" signature="2363:2400" ph="SELECT * FRO... users" />
-            <marker date="1504925722669" expanded="true" signature="3904:3931" ph="SELECT * FRO... view_articles" />
-            <marker date="1504925722669" expanded="true" signature="4392:4414" ph="SELECT * FRO... category" />
-            <marker date="1504925722669" expanded="true" signature="5028:5065" ph="INSERT INTO category... " />
-            <marker date="1504925722669" expanded="true" signature="5397:5424" ph="SELECT * FRO... articles" />
-            <marker date="1504925722669" expanded="true" signature="5790:5811" ph="SELECT * FRO... view_ar" />
-            <marker date="1504925722669" expanded="true" signature="5790:5831" ph="SELECT * FRO... view_articles" />
-            <marker date="1504925722669" expanded="true" signature="5790:5837" ph="SELECT * FRO... view_articles" />
-            <marker date="1504925722669" expanded="true" signature="6625:6702" ph="INSERT INTO articles... " />
-            <marker date="1504925722669" expanded="true" signature="6911:6933" ph="SELECT * FRO... category" />
+            <marker date="1505486775266" expanded="true" signature="1620:1701" ph="INSERT INTO users... " />
+            <marker date="1505486775266" expanded="true" signature="1620:1716" ph="INSERT INTO users... " />
+            <marker date="1505486775266" expanded="true" signature="2363:2400" ph="SELECT * FRO... users" />
+            <marker date="1505486775266" expanded="true" signature="3904:3931" ph="SELECT * FRO... view_articles" />
+            <marker date="1505486775266" expanded="true" signature="4392:4414" ph="SELECT * FRO... category" />
+            <marker date="1505486775266" expanded="true" signature="5028:5074" ph="INSERT INTO category... " />
+            <marker date="1505486775266" expanded="true" signature="5412:5439" ph="SELECT * FRO... articles" />
+            <marker date="1505486775266" expanded="true" signature="5805:5826" ph="SELECT * FRO... view_ar" />
+            <marker date="1505486775266" expanded="true" signature="5805:5846" ph="SELECT * FRO... view_articles" />
+            <marker date="1505486775266" expanded="true" signature="5805:5852" ph="SELECT * FRO... view_articles" />
+            <marker date="1505486775266" expanded="true" signature="6670:6747" ph="INSERT INTO articles... " />
+            <marker date="1505486775266" expanded="true" signature="6956:6978" ph="SELECT * FRO... category" />
           </folding>
         </state>
       </provider>
@@ -381,18 +421,18 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#84#0" expanded="true" />
-            <marker date="1504925722669" expanded="true" signature="1620:1701" ph="INSERT INTO users... " />
-            <marker date="1504925722669" expanded="true" signature="1620:1716" ph="INSERT INTO users... " />
-            <marker date="1504925722669" expanded="true" signature="2363:2400" ph="SELECT * FRO... users" />
-            <marker date="1504925722669" expanded="true" signature="3904:3931" ph="SELECT * FRO... view_articles" />
-            <marker date="1504925722669" expanded="true" signature="4392:4414" ph="SELECT * FRO... category" />
-            <marker date="1504925722669" expanded="true" signature="5028:5065" ph="INSERT INTO category... " />
-            <marker date="1504925722669" expanded="true" signature="5397:5424" ph="SELECT * FRO... articles" />
-            <marker date="1504925722669" expanded="true" signature="5790:5811" ph="SELECT * FRO... view_ar" />
-            <marker date="1504925722669" expanded="true" signature="5790:5831" ph="SELECT * FRO... view_articles" />
-            <marker date="1504925722669" expanded="true" signature="5790:5837" ph="SELECT * FRO... view_articles" />
-            <marker date="1504925722669" expanded="true" signature="6625:6702" ph="INSERT INTO articles... " />
-            <marker date="1504925722669" expanded="true" signature="6911:6933" ph="SELECT * FRO... category" />
+            <marker date="1505486775266" expanded="true" signature="1620:1701" ph="INSERT INTO users... " />
+            <marker date="1505486775266" expanded="true" signature="1620:1716" ph="INSERT INTO users... " />
+            <marker date="1505486775266" expanded="true" signature="2363:2400" ph="SELECT * FRO... users" />
+            <marker date="1505486775266" expanded="true" signature="3904:3931" ph="SELECT * FRO... view_articles" />
+            <marker date="1505486775266" expanded="true" signature="4392:4414" ph="SELECT * FRO... category" />
+            <marker date="1505486775266" expanded="true" signature="5028:5074" ph="INSERT INTO category... " />
+            <marker date="1505486775266" expanded="true" signature="5412:5439" ph="SELECT * FRO... articles" />
+            <marker date="1505486775266" expanded="true" signature="5805:5826" ph="SELECT * FRO... view_ar" />
+            <marker date="1505486775266" expanded="true" signature="5805:5846" ph="SELECT * FRO... view_articles" />
+            <marker date="1505486775266" expanded="true" signature="5805:5852" ph="SELECT * FRO... view_articles" />
+            <marker date="1505486775266" expanded="true" signature="6670:6747" ph="INSERT INTO articles... " />
+            <marker date="1505486775266" expanded="true" signature="6956:6978" ph="SELECT * FRO... category" />
           </folding>
         </state>
       </provider>
@@ -417,7 +457,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
           <caret line="29" column="14" lean-forward="true" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -427,18 +466,18 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#84#0" expanded="true" />
-            <marker date="1504925722669" expanded="true" signature="1620:1701" ph="INSERT INTO users... " />
-            <marker date="1504925722669" expanded="true" signature="1620:1716" ph="INSERT INTO users... " />
-            <marker date="1504925722669" expanded="true" signature="2363:2400" ph="SELECT * FRO... users" />
-            <marker date="1504925722669" expanded="true" signature="3904:3931" ph="SELECT * FRO... view_articles" />
-            <marker date="1504925722669" expanded="true" signature="4392:4414" ph="SELECT * FRO... category" />
-            <marker date="1504925722669" expanded="true" signature="5028:5065" ph="INSERT INTO category... " />
-            <marker date="1504925722669" expanded="true" signature="5397:5424" ph="SELECT * FRO... articles" />
-            <marker date="1504925722669" expanded="true" signature="5790:5811" ph="SELECT * FRO... view_ar" />
-            <marker date="1504925722669" expanded="true" signature="5790:5831" ph="SELECT * FRO... view_articles" />
-            <marker date="1504925722669" expanded="true" signature="5790:5837" ph="SELECT * FRO... view_articles" />
-            <marker date="1504925722669" expanded="true" signature="6625:6702" ph="INSERT INTO articles... " />
-            <marker date="1504925722669" expanded="true" signature="6911:6933" ph="SELECT * FRO... category" />
+            <marker date="1505486775266" expanded="true" signature="1620:1701" ph="INSERT INTO users... " />
+            <marker date="1505486775266" expanded="true" signature="1620:1716" ph="INSERT INTO users... " />
+            <marker date="1505486775266" expanded="true" signature="2363:2400" ph="SELECT * FRO... users" />
+            <marker date="1505486775266" expanded="true" signature="3904:3931" ph="SELECT * FRO... view_articles" />
+            <marker date="1505486775266" expanded="true" signature="4392:4414" ph="SELECT * FRO... category" />
+            <marker date="1505486775266" expanded="true" signature="5028:5074" ph="INSERT INTO category... " />
+            <marker date="1505486775266" expanded="true" signature="5412:5439" ph="SELECT * FRO... articles" />
+            <marker date="1505486775266" expanded="true" signature="5805:5826" ph="SELECT * FRO... view_ar" />
+            <marker date="1505486775266" expanded="true" signature="5805:5846" ph="SELECT * FRO... view_articles" />
+            <marker date="1505486775266" expanded="true" signature="5805:5852" ph="SELECT * FRO... view_articles" />
+            <marker date="1505486775266" expanded="true" signature="6670:6747" ph="INSERT INTO articles... " />
+            <marker date="1505486775266" expanded="true" signature="6956:6978" ph="SELECT * FRO... category" />
           </folding>
         </state>
       </provider>
@@ -447,7 +486,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="12" column="3" lean-forward="false" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -487,18 +525,18 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#84#0" expanded="true" />
-            <marker date="1504925722669" expanded="true" signature="1620:1701" ph="INSERT INTO users... " />
-            <marker date="1504925722669" expanded="true" signature="1620:1716" ph="INSERT INTO users... " />
-            <marker date="1504925722669" expanded="true" signature="2363:2400" ph="SELECT * FRO... users" />
-            <marker date="1504925722669" expanded="true" signature="3904:3931" ph="SELECT * FRO... view_articles" />
-            <marker date="1504925722669" expanded="true" signature="4392:4414" ph="SELECT * FRO... category" />
-            <marker date="1504925722669" expanded="true" signature="5028:5065" ph="INSERT INTO category... " />
-            <marker date="1504925722669" expanded="true" signature="5397:5424" ph="SELECT * FRO... articles" />
-            <marker date="1504925722669" expanded="true" signature="5790:5811" ph="SELECT * FRO... view_ar" />
-            <marker date="1504925722669" expanded="true" signature="5790:5831" ph="SELECT * FRO... view_articles" />
-            <marker date="1504925722669" expanded="true" signature="5790:5837" ph="SELECT * FRO... view_articles" />
-            <marker date="1504925722669" expanded="true" signature="6625:6702" ph="INSERT INTO articles... " />
-            <marker date="1504925722669" expanded="true" signature="6911:6933" ph="SELECT * FRO... category" />
+            <marker date="1505486775266" expanded="true" signature="1620:1701" ph="INSERT INTO users... " />
+            <marker date="1505486775266" expanded="true" signature="1620:1716" ph="INSERT INTO users... " />
+            <marker date="1505486775266" expanded="true" signature="2363:2400" ph="SELECT * FRO... users" />
+            <marker date="1505486775266" expanded="true" signature="3904:3931" ph="SELECT * FRO... view_articles" />
+            <marker date="1505486775266" expanded="true" signature="4392:4414" ph="SELECT * FRO... category" />
+            <marker date="1505486775266" expanded="true" signature="5028:5074" ph="INSERT INTO category... " />
+            <marker date="1505486775266" expanded="true" signature="5412:5439" ph="SELECT * FRO... articles" />
+            <marker date="1505486775266" expanded="true" signature="5805:5826" ph="SELECT * FRO... view_ar" />
+            <marker date="1505486775266" expanded="true" signature="5805:5846" ph="SELECT * FRO... view_articles" />
+            <marker date="1505486775266" expanded="true" signature="5805:5852" ph="SELECT * FRO... view_articles" />
+            <marker date="1505486775266" expanded="true" signature="6670:6747" ph="INSERT INTO articles... " />
+            <marker date="1505486775266" expanded="true" signature="6956:6978" ph="SELECT * FRO... category" />
           </folding>
         </state>
       </provider>
@@ -515,7 +553,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="12" column="3" lean-forward="false" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -547,18 +584,18 @@
           <caret line="11" column="22" lean-forward="false" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
           <folding>
             <element signature="e#0#84#0" expanded="true" />
-            <marker date="1504925722669" expanded="true" signature="1620:1701" ph="INSERT INTO users... " />
-            <marker date="1504925722669" expanded="true" signature="1620:1716" ph="INSERT INTO users... " />
-            <marker date="1504925722669" expanded="true" signature="2363:2400" ph="SELECT * FRO... users" />
-            <marker date="1504925722669" expanded="true" signature="3904:3931" ph="SELECT * FRO... view_articles" />
-            <marker date="1504925722669" expanded="true" signature="4392:4414" ph="SELECT * FRO... category" />
-            <marker date="1504925722669" expanded="true" signature="5028:5065" ph="INSERT INTO category... " />
-            <marker date="1504925722669" expanded="true" signature="5397:5424" ph="SELECT * FRO... articles" />
-            <marker date="1504925722669" expanded="true" signature="5790:5811" ph="SELECT * FRO... view_ar" />
-            <marker date="1504925722669" expanded="true" signature="5790:5831" ph="SELECT * FRO... view_articles" />
-            <marker date="1504925722669" expanded="true" signature="5790:5837" ph="SELECT * FRO... view_articles" />
-            <marker date="1504925722669" expanded="true" signature="6625:6702" ph="INSERT INTO articles... " />
-            <marker date="1504925722669" expanded="true" signature="6911:6933" ph="SELECT * FRO... category" />
+            <marker date="1505486775266" expanded="true" signature="1620:1701" ph="INSERT INTO users... " />
+            <marker date="1505486775266" expanded="true" signature="1620:1716" ph="INSERT INTO users... " />
+            <marker date="1505486775266" expanded="true" signature="2363:2400" ph="SELECT * FRO... users" />
+            <marker date="1505486775266" expanded="true" signature="3904:3931" ph="SELECT * FRO... view_articles" />
+            <marker date="1505486775266" expanded="true" signature="4392:4414" ph="SELECT * FRO... category" />
+            <marker date="1505486775266" expanded="true" signature="5028:5074" ph="INSERT INTO category... " />
+            <marker date="1505486775266" expanded="true" signature="5412:5439" ph="SELECT * FRO... articles" />
+            <marker date="1505486775266" expanded="true" signature="5805:5826" ph="SELECT * FRO... view_ar" />
+            <marker date="1505486775266" expanded="true" signature="5805:5846" ph="SELECT * FRO... view_articles" />
+            <marker date="1505486775266" expanded="true" signature="5805:5852" ph="SELECT * FRO... view_articles" />
+            <marker date="1505486775266" expanded="true" signature="6670:6747" ph="INSERT INTO articles... " />
+            <marker date="1505486775266" expanded="true" signature="6956:6978" ph="SELECT * FRO... category" />
           </folding>
         </state>
       </provider>
@@ -583,26 +620,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/add_category.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="46" lean-forward="false" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/lib/python3.5/dist-packages/flask/app.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1609">
           <caret line="960" column="8" lean-forward="false" selection-start-line="960" selection-start-column="8" selection-end-line="960" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/categories.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
           <folding />
         </state>
       </provider>
@@ -640,7 +661,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="4" column="27" lean-forward="false" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -664,23 +684,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="27" column="17" lean-forward="true" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/article.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="39" lean-forward="false" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/articles.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="35">
-          <caret line="11" column="16" lean-forward="true" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -688,14 +691,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="183">
           <caret line="17" column="16" lean-forward="true" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/biohazard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="35" lean-forward="true" selection-start-line="0" selection-start-column="35" selection-end-line="0" selection-end-column="35" />
           <folding />
         </state>
       </provider>
@@ -708,32 +703,72 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/article.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="46" lean-forward="true" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/categories.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="14" lean-forward="true" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/add_article.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="35">
-          <caret line="9" column="82" lean-forward="false" selection-start-line="9" selection-start-column="82" selection-end-line="9" selection-end-column="82" />
+        <state relative-caret-position="144">
+          <caret line="9" column="73" lean-forward="false" selection-start-line="9" selection-start-column="73" selection-end-line="9" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/biohazard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="35" lean-forward="true" selection-start-line="0" selection-start-column="35" selection-end-line="0" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/add_category.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="46" lean-forward="false" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/articles.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="9" column="40" lean-forward="false" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="212" column="34" lean-forward="true" selection-start-line="212" selection-start-column="34" selection-end-line="212" selection-end-column="34" />
+        <state relative-caret-position="-253">
+          <caret line="223" column="0" lean-forward="true" selection-start-line="223" selection-start-column="0" selection-end-line="223" selection-end-column="0" />
           <folding>
             <element signature="e#0#84#0" expanded="true" />
-            <marker date="1504925722669" expanded="true" signature="1620:1701" ph="INSERT INTO users... " />
-            <marker date="1504925722669" expanded="true" signature="1620:1716" ph="INSERT INTO users... " />
-            <marker date="1504925722669" expanded="true" signature="2363:2400" ph="SELECT * FRO... users" />
-            <marker date="1504925722669" expanded="true" signature="3904:3931" ph="SELECT * FRO... view_articles" />
-            <marker date="1504925722669" expanded="true" signature="4392:4414" ph="SELECT * FRO... category" />
-            <marker date="1504925722669" expanded="true" signature="5028:5065" ph="INSERT INTO category... " />
-            <marker date="1504925722669" expanded="true" signature="5397:5424" ph="SELECT * FRO... articles" />
-            <marker date="1504925722669" expanded="true" signature="5790:5811" ph="SELECT * FRO... view_ar" />
-            <marker date="1504925722669" expanded="true" signature="5790:5831" ph="SELECT * FRO... view_articles" />
-            <marker date="1504925722669" expanded="true" signature="5790:5837" ph="SELECT * FRO... view_articles" />
-            <marker date="1504925722669" expanded="true" signature="6625:6702" ph="INSERT INTO articles... " />
-            <marker date="1504925722669" expanded="true" signature="6911:6933" ph="SELECT * FRO... category" />
+            <marker date="1505486775266" expanded="true" signature="1620:1701" ph="INSERT INTO users... " />
+            <marker date="1505486775266" expanded="true" signature="1620:1716" ph="INSERT INTO users... " />
+            <marker date="1505486775266" expanded="true" signature="2363:2400" ph="SELECT * FRO... users" />
+            <marker date="1505486775266" expanded="true" signature="3904:3931" ph="SELECT * FRO... view_articles" />
+            <marker date="1505486775266" expanded="true" signature="4392:4414" ph="SELECT * FRO... category" />
+            <marker date="1505486775266" expanded="true" signature="5028:5074" ph="INSERT INTO category... " />
+            <marker date="1505486775266" expanded="true" signature="5412:5439" ph="SELECT * FRO... articles" />
+            <marker date="1505486775266" expanded="true" signature="5805:5826" ph="SELECT * FRO... view_ar" />
+            <marker date="1505486775266" expanded="true" signature="5805:5846" ph="SELECT * FRO... view_articles" />
+            <marker date="1505486775266" expanded="true" signature="5805:5852" ph="SELECT * FRO... view_articles" />
+            <marker date="1505486775266" expanded="true" signature="6670:6747" ph="INSERT INTO articles... " />
+            <marker date="1505486775266" expanded="true" signature="6956:6978" ph="SELECT * FRO... category" />
           </folding>
         </state>
       </provider>

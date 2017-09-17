@@ -7,7 +7,7 @@
                     {{ article.title }}
                 </h2>
                 <h3 class="post-subtitle">
-                    {{ article.body }}
+                    {{ article.body|safe }}
                 </h3>
             </a>
             <p>{{ article.category_name }}</p>

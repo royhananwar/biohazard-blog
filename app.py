@@ -174,7 +174,7 @@ def add_category():
         cur = mysql.connection.cursor()
 
         # Insert to DB
-        cur.execute('INSERT INTO category(name) VALUES(%s)', (category_name, ))
+        cur.execute('INSERT INTO category(category_name) VALUES(%s)', (category_name, ))
 
         # Save to DB
         mysql.connection.commit()
@@ -182,7 +182,7 @@ def add_category():
         # Close connection
         cur.close()
 
-        return redirect(url_for('category'))
+        return redirect(url_for('category_index'))
 
     return render_template('add_category.html')
 
@@ -229,6 +229,7 @@ def add_article():
     if request.method == "POST":
         title = request.form['title']
         body = request.form['body']
+        app.logger.info(body)
         category_id = request.form['category_id']
 
         cur.execute("INSERT INTO articles(title, body, category_id, author) VALUES(%s, %s, %s, %s)",
