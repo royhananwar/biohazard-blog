@@ -2,15 +2,15 @@
 {% block content %}
     {% for article in articles %}
         <div class="post-preview">
-            <a href='article/{{ article.article_id }}'>
+            <center><a href='article/{{ article.article_id }}'>
                 <h2 class="post-title">
                     {{ article.title }}
                 </h2>
-                <h3 class="post-subtitle">
-                    {{ article.body|safe }}
-                </h3>
             </a>
-            <p>{{ article.category_name }}</p>
+            </center>
+            <a href="/category/#">
+                <p class="text-md-right">Tag : {{ article.category_name }}</p>
+            </a>
             <p class="post-meta">Posted by
                 <a href="/user/#">{{ article.author }}</a>
                 {{ article.create_date.strftime("%a, %m %d %y at %I:%M %p") }}</p>

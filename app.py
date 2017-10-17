@@ -1,6 +1,6 @@
 from flask import Flask, render_template, flash, redirect, url_for, session, request
 from flask_mysqldb import MySQL
-from wtforms import Form, StringField, TextAreaField, PasswordField, validators, SelectField
+from wtforms import Form, StringField, PasswordField, validators
 
 from passlib.hash import sha256_crypt
 from functools import wraps
@@ -23,7 +23,16 @@ mysql = MySQL(app)
 # Home Page
 @app.route('/')
 def home():
-    return render_template('base.html')
+    cur = mysql.connection.cursor()
+    result = cur.execute("SELECT * FROM view_articles ORDER BY create_date DESC")
+    articles = cur.fetchall()
+    cur.close()
+
+    if result > 0:
+        return render_template('articles.html', articles=articles)
+    else:
+        msg = "No articles found"
+        return render_template('articles.html', msg=msg)
 
 
 # Make form for registration
@@ -191,7 +200,7 @@ def add_category():
 def articles_index():
 
     cur = mysql.connection.cursor()
-    result = cur.execute("SELECT * FROM view_articles")
+    result = cur.execute("SELECT * FROM view_articles ORDER BY create_date DESC")
     articles = cur.fetchall()
     cur.close()
 
@@ -229,7 +238,6 @@ def add_article():
     if request.method == "POST":
         title = request.form['title']
         body = request.form['body']
-        app.logger.info(body)
         category_id = request.form['category_id']
 
         cur.execute("INSERT INTO articles(title, body, category_id, author) VALUES(%s, %s, %s, %s)",
@@ -244,6 +252,44 @@ def add_article():
         cur.close()
 
         return render_template('add_article.html', categories=categories)
+
+
+@app.route('/edit_article/<int:article_id>', methods=['GET', 'POST'])
+@login_required
+def edit_article(article_id):
+    # Create Cursor
+    cur = mysql.connection.cursor()
+    cur1 = mysql.connection.cursor()
+    cur2 = mysql.connection.cursor()
+    if request.method == "GET":
+        result = cur.execute("SELECT * FROM articles WHERE article_id=%s", (article_id, ))
+        if result > 0:
+            article = cur.fetchone()
+
+            cur1.execute("SELECT * FROM category")
+            categories = cur1.fetchall()
+
+            cur2.execute("SELECT * FROM category WHERE category_id=%s", (article['category_id'], ))
+            category = cur2.fetchone()
+
+            cur.close()
+            cur1.close()
+            cur2.close()
+
+            return render_template('edit_article.html', article=article, categories=categories, category=category)
+    else:
+        title = request.form['title']
+        body = request.form['body']
+        category_id = request.form['category_id']
+
+        cur.execute("UPDATE articles SET title=%s, body=%s, category_id=%s WHERE article_id=%s", (title, body, category_id, article_id))
+        mysql.connection.commit()
+        cur.close()
+
+        return redirect(url_for('articles_index'))
+    
+        
+    
 
 
 if __name__ == '__main__':
